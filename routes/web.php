@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 Route::resource('dosen_wali', \App\Http\Controllers\DosenWaliController::class);
+Route::resource('mahasiswa', \App\Http\Controllers\MahasiswaController::class);
+

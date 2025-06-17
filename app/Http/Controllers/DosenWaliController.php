@@ -29,10 +29,10 @@ class DosenWaliController extends Controller
         ]);
 
         $response = Http::asJson()->post('http://localhost:8080/dosen', [
-    'nama_dosen' => $request->nama_dosen,
-    'nidn' => $request->nidn,
-    'id_user' => $request->id_user,
-]);
+            'nama_dosen' => $request->nama_dosen,
+            'nidn' => $request->nidn,
+            'id_user' => $request->id_user,
+        ]);
 
         if ($response->successful()) {
             return redirect()->route('dosen_wali.index')->with('success', 'Berhasil menambahkan dosen.');
@@ -46,7 +46,7 @@ class DosenWaliController extends Controller
         $response = Http::get("http://localhost:8080/dosen/$id_dosen");
 
         if ($response->successful()) {
-     $dosen = $response->json()[0];
+            $dosen = $response->json()[0];
             return view('dosen_wali.edit', compact('dosen'));
         }
 

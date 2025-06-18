@@ -1,4 +1,4 @@
-yanng pertama clone repository / download
+yanng pertama clone repository / download -> git clone link github
 
 yang kedua kita test postman
 
@@ -16,5 +16,12 @@ mulai membuat model dan controller
 
 test menggunakan php artisan migrate dan php spark serve
 
-git clone link github
+git init
+git add .
+git commit -m "Komentar"
+git remote add origin https://github.com/username/nama-repo.git
+git branch -M main
+git push -u origin main
+
+
 
